@@ -1,7 +1,14 @@
 {
-  "name": "current-project",
+  "name": "rahul-shadcn-registry",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "Custom shadcn/ui component registry by Rahul Jangir",
+  "author": "Rahul Jangir <rahuljangir.works@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rahuljangirwork/rahul-shadcn-registry.git"
+  },
+  "homepage": "https://github.com/rahuljangirwork/rahul-shadcn-registry",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -9,9 +16,10 @@
     "preview": "astro preview",
     "astro": "astro",
     "registry:build": "shadcn build",
-    "prepare": "husky",
+    "prepare": "command -v husky >/dev/null 2>&1 && husky || echo 'Husky not available in CI, skipping...'",
     "lint": "eslint --fix .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "postinstall": "npm run registry:build"
   },
   "lint-staged": {
     "**/*": [
@@ -69,6 +77,7 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "globals": "^16.3.0",
+    "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
