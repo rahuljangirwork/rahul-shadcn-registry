@@ -52,7 +52,7 @@ export default defineConfig({
           tag: "link",
           attrs: {
             rel: "icon",
-            href: "/favicon-dark.svg",
+            href: "/favicon.svg",
             media: "(prefers-color-scheme: dark)",
             type: "image/svg+xml",
           },
@@ -68,31 +68,31 @@ export default defineConfig({
           },
         },
       ],
-      title: "WDS Shadcn Registry",
+      title: "Rahul Shadcn Registry",
       editLink: {
         baseUrl: `${GITHUB_REPO_URL}/tree/main`,
       },
-      logo: {
-        dark: "./src/assets/logo/dark.png",
-        light: "./src/assets/logo/light.png",
-        replacesTitle: true,
-      },
+      // logo: {
+      //   dark: "./src/assets/logo/favicon.png",
+      //   light: "./src/assets/logo/favicon.png",
+      //   replacesTitle: true,
+      // },
       social: [
         {
           icon: "github",
           label: "GitHub",
           href: GITHUB_REPO_URL,
         },
-        {
-          icon: "youtube",
-          label: "YouTube",
-          href: "https://www.youtube.com/@WebDevSimplified",
-        },
-        {
-          icon: "x.com",
-          label: "X.com",
-          href: "https://x.com/DevSimplified",
-        },
+        // {
+        //   icon: "youtube",
+        //   label: "YouTube",
+        //   href: "https://www.youtube.com/",
+        // },
+        // {
+        //   icon: "x.com",
+        //   label: "X.com",
+        //   href: "https://x.com/",
+        // },
       ],
       customCss: ["./src/styles/global.css"],
       sidebar: [
@@ -143,7 +143,7 @@ export default defineConfig({
             },
           ],
           footerText:
-            "Built by [Web Dev Simplified](https://webdevsimplified.com) for use with [Shadcn](https://ui.shadcn.com)",
+            "Built by [rahul jangir](https://rahuljangir.work) for use with [Shadcn](https://ui.shadcn.com)",
         }),
       ],
     }),

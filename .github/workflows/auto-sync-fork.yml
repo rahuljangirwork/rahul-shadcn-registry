@@ -1,0 +1,51 @@
+name: Auto Sync Fork with Upstream
+
+on:
+  schedule:
+    - cron: '0 9 * * 1,4'  # Monday & Thursday at 9 AM
+  workflow_dispatch:  # Manual trigger button
+
+jobs:
+  sync_upstream:
+    runs-on: ubuntu-latest
+    name: Sync both main and dev with upstream
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Configure Git
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+
+    - name: Add upstream remote
+      run: |
+        git remote add upstream https://github.com/rahuljangirwork/rahul-shadcn-registry.git || true
+        git fetch upstream
+
+    # Sync main branch
+    - name: Sync main branch
+      run: |
+        git checkout main
+        git merge upstream/main --ff-only
+        git push origin main
+      continue-on-error: false
+
+    # Sync dev branch with latest upstream changes
+    - name: Sync dev branch
+      run: |
+        git checkout dev
+        git rebase main --no-ff
+        git push origin dev --force-with-lease
+      continue-on-error: true
+
+    - name: Check sync status
+      run: |
+        echo "✅ Main branch synced successfully"
+        echo "✅ Dev branch updated with latest upstream changes"
+        git log --oneline -5 main
+        git log --oneline -5 dev

@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "WDS Shadcn Registry",
-  "homepage": "https://wds-shadcn-registry.netlify.app",
+  "name": "Rahul Shadcn Registry",
+  "homepage": "https://rahul-shadcn-registry.netlify.app",
   "items": [
     {
       "name": "loading-swap",
@@ -22,7 +22,7 @@
         "alert-dialog",
         "button",
         "sonner",
-        "https://wds-shadcn-registry.netlify.app/r/loading-swap.json"
+        "https://rahul-shadcn-registry.netlify.app/r/loading-swap.json"
       ],
       "files": [
         {
@@ -35,7 +35,9 @@
       "name": "number-input",
       "description": "An input that returns a number value and automatically handles invalid inputs.",
       "type": "registry:component",
-      "registryDependencies": ["input"],
+      "registryDependencies": [
+        "input"
+      ],
       "files": [
         {
           "path": "src/registry/new-york/items/number-input/components/number-input.tsx",
@@ -47,7 +49,12 @@
       "name": "multi-select",
       "description": "A multi-select input that emulates the Shadcn Select component as closely as possible.",
       "type": "registry:component",
-      "registryDependencies": ["popover", "command", "badge", "button"],
+      "registryDependencies": [
+        "popover",
+        "command",
+        "badge",
+        "button"
+      ],
       "files": [
         {
           "path": "src/registry/new-york/items/multi-select/components/multi-select.tsx",
@@ -59,7 +66,10 @@
       "name": "password-input",
       "description": "An input that can toggle visibility of the password text.",
       "type": "registry:component",
-      "registryDependencies": ["input", "button"],
+      "registryDependencies": [
+        "input",
+        "button"
+      ],
       "files": [
         {
           "path": "src/registry/new-york/items/password-input/components/password-input.tsx",

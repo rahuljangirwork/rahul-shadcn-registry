@@ -1,0 +1,164 @@
+rahul-shadcn-registry/
+│
+├── 📋 ROOT FILES
+│   ├── package.json                           # Project dependencies & scripts
+│   ├── package-lock.json                      # Dependency lock file
+│   ├── tsconfig.json                          # TypeScript configuration
+│   ├── registry.json                          # Registry configuration
+│   ├── README.md                              # Project documentation
+│   └── SECURITY.md                            # Security guidelines
+│
+├── 📁 public/                                 # Static assets served directly
+│   ├── 🖼️ FAVICON FILES
+│   │   ├── android-chrome-192x192.png
+│   │   ├── android-chrome-512x512.png
+│   │   ├── apple-touch-icon.png
+│   │   ├── favicon.ico
+│   │   ├── favicon.svg
+│   │   ├── favicon-16x16.png
+│   │   ├── favicon-32x32.png
+│   │   └── favicon-dark.svg
+│   │
+│   ├── 📁 r/                                  # Registry JSON definitions
+│   │   ├── action-button.json
+│   │   ├── loading-swap.json
+│   │   ├── multi-select.json
+│   │   ├── number-input.json
+│   │   └── password-input.json
+│   │
+│   └── site.webmanifest                       # PWA manifest
+│
+├── 📁 src/                                    # Source code directory
+│   │
+│   ├── 📁 assets/                             # Static assets
+│   │   └── logo/
+│   │       ├── dark.png
+│   │       └── light.png
+│   │
+│   ├── 📁 components/                         # React components
+│   │   │
+│   │   ├── 📁 icons/                          # Icon components
+│   │   │   ├── css-icon.tsx
+│   │   │   └── typescript-icon.tsx
+│   │   │
+│   │   ├── 📁 markdown/                       # Documentation components
+│   │   │   ├── cli-command-code/
+│   │   │   │   ├── _cli-command-code-internal.tsx
+│   │   │   │   └── cli-command-code.astro
+│   │   │   ├── code-preview/
+│   │   │   │   ├── _code-preview-internal.tsx
+│   │   │   │   └── code-preview.astro
+│   │   │   ├── component-list/
+│   │   │   │   └── component-list.astro
+│   │   │   ├── installation-tabs/
+│   │   │   │   ├── _installation-tabs-internal.tsx
+│   │   │   │   └── installation-tabs.astro
+│   │   │   └── toast-provider.astro
+│   │   │
+│   │   ├── 📁 overrides/                      # Astro component overrides
+│   │   │   └── head.astro
+│   │   │
+│   │   ├── 📁 ui/                             # Base UI components (shadcn/ui)
+│   │   │   ├── alert-dialog.tsx
+│   │   │   ├── badge.tsx
+│   │   │   ├── button.tsx
+│   │   │   ├── card.tsx
+│   │   │   ├── command.tsx
+│   │   │   ├── dialog.tsx
+│   │   │   ├── form.tsx
+│   │   │   ├── input.tsx
+│   │   │   ├── label.tsx
+│   │   │   ├── loading-swap.tsx
+│   │   │   ├── popover.tsx
+│   │   │   ├── select.tsx
+│   │   │   ├── sonner.tsx
+│   │   │   ├── tabs.tsx
+│   │   │   └── tooltip.tsx
+│   │   │
+│   │   ├── manual-install-code-card.tsx       # Installation helper component
+│   │   └── open-in-v0-button.tsx             # V0 integration component
+│   │
+│   ├── 📁 content/                            # Astro content collections
+│   │   └── docs/                              # Documentation pages
+│   │       ├── components/                    # Component documentation
+│   │       │   ├── action-button.mdx
+│   │       │   ├── loading-swap.mdx
+│   │       │   ├── multi-select.mdx
+│   │       │   ├── number-input.mdx
+│   │       │   └── password-input.mdx
+│   │       ├── contributing/                  # Contribution guides
+│   │       │   ├── component-request.mdx
+│   │       │   ├── contributing-code.mdx
+│   │       │   ├── feature-request.mdx
+│   │       │   └── index.mdx
+│   │       ├── getting-started/               # Setup documentation
+│   │       │   ├── installation.mdx
+│   │       │   └── introduction.mdx
+│   │       ├── components.mdx                 # Components overview
+│   │       └── index.mdx                      # Documentation home
+│   │
+│   ├── 📁 registry/                           # Component registry
+│   │   └── new-york/                          # Style variant (New York style)
+│   │       │
+│   │       ├── 📁 examples/                   # Usage examples
+│   │       │   ├── action-button/
+│   │       │   │   ├── basic.tsx
+│   │       │   │   ├── default.tsx
+│   │       │   │   ├── error.tsx
+│   │       │   │   └── require-are-you-sure.tsx
+│   │       │   ├── loading-swap/
+│   │       │   │   ├── basic.tsx
+│   │       │   │   └── large-component.tsx
+│   │       │   ├── multi-select/
+│   │       │   │   ├── basic.tsx
+│   │       │   │   ├── customize-badges.tsx
+│   │       │   │   ├── form.tsx
+│   │       │   │   ├── overflow-behavior.tsx
+│   │       │   │   └── search-configuration.tsx
+│   │       │   ├── number-input/
+│   │       │   │   ├── basic.tsx
+│   │       │   │   └── form.tsx
+│   │       │   └── password-input/
+│   │       │       ├── basic.tsx
+│   │       │       └── form.tsx
+│   │       │
+│   │       └── 📁 items/                      # Component definitions
+│   │           ├── action-button/
+│   │           │   └── components/
+│   │           │       └── action-button.tsx
+│   │           ├── loading-swap/
+│   │           │   └── components/
+│   │           │       └── loading-swap.tsx
+│   │           ├── multi-select/
+│   │           │   └── components/
+│   │           │       └── multi-select.tsx
+│   │           ├── number-input/
+│   │           │   └── components/
+│   │           │       └── number-input.tsx
+│   │           └── password-input/
+│   │               └── components/
+│   │                   └── password-input.tsx
+│   │
+│   ├── 📁 data/                               # Data configuration
+│   │   └── env.ts                             # Environment variables
+│   │
+│   ├── 📁 hooks/                              # Custom React hooks
+│   │   └── useLocalStorage.ts
+│   │
+│   ├── 📁 lib/                                # Utility functions
+│   │   └── utils.ts
+│   │
+│   ├── 📁 styles/                             # Global styles
+│   │   └── global.css
+│   │
+│   ├── 📁 types/                              # TypeScript type definitions
+│   │   └── shadcn-registry.ts
+│   │
+│   └── content.config.ts                      # Astro content configuration
+│
+└── 📊 PROJECT SUMMARY
+    ├── Total Files: ~85 files
+    ├── Main Tech Stack: Astro + React + TypeScript + Tailwind CSS
+    ├── Component Registry: New York style variant
+    ├── Components: 5 custom components (action-button, loading-swap, multi-select, number-input, password-input)
+    └── Documentation: Complete MDX-based documentation system
