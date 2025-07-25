@@ -2,7 +2,7 @@
 import { defineConfig, envField } from "astro/config"
 import starlight from "@astrojs/starlight"
 import react from "@astrojs/react"
-import tailwind from "@astrojs/tailwind" 
+import tailwindcss from "@tailwindcss/vite"
 import starlightThemeBlack from "starlight-theme-black"
 import { loadEnv } from "vite"
 
@@ -150,6 +150,7 @@ export default defineConfig({
     react(),
   ],
   vite: {
-    plugins: [tailwind()],
+    // @ts-ignore - Bypass TypeScript error due to dual Vite versions
+    plugins: tailwindcss(),
   },
 })

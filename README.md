@@ -4,7 +4,7 @@ A collection of accessible components built for use with Shadcn
 
 ## Documentation
 
-Visit https://rahul-shadcn-registry.netlify.app to view the documentation.
+Visit https://rahul-shadcn-registry.pages.dev/ to view the documentation.
 
 ## Contributing
 
