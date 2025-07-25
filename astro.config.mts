@@ -2,7 +2,7 @@
 import { defineConfig, envField } from "astro/config"
 import starlight from "@astrojs/starlight"
 import react from "@astrojs/react"
-import tailwindcss from "@tailwindcss/vite"
+import tailwind from "@astrojs/tailwind" 
 import starlightThemeBlack from "starlight-theme-black"
 import { loadEnv } from "vite"
 
@@ -150,6 +150,6 @@ export default defineConfig({
     react(),
   ],
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [tailwind()],
   },
 })
