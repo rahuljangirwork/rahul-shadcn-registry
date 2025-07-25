@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "Rahul Shadcn Registry",
-  "homepage": "https://rahul-shadcn-registry.netlify.app",
+  "homepage": "https://rahul-shadcn-registry.pages.dev",
   "items": [
     {
       "name": "loading-swap",
@@ -22,7 +22,7 @@
         "alert-dialog",
         "button",
         "sonner",
-        "https://rahul-shadcn-registry.netlify.app/r/loading-swap.json"
+        "https://rahul-shadcn-registry.pages.dev/r/loading-swap.json"
       ],
       "files": [
         {
